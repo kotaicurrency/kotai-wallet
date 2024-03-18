@@ -14,7 +14,7 @@ Seamless integration with any KOTAI compatible RPC backend/websocket and the aim
 ___
 
 ## How To Use
-KOTAI-Wallet comes in different flavors to suit your needs.
+KOTAI-Wallet comes in different flavors to suit your needs!
 #### Desktop App
 Available for Windows/Mac/Linux – just head over to the [latest release](https://github.com/kotaicurrency/kotai-wallet/releases/latest) and download the version for your OS. Arch Linux users may [install it from the (unofficial) AUR](https://aur.archlinux.org/packages/nault-bin/).
 
