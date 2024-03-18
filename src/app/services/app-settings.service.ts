@@ -9,7 +9,7 @@ export type LedgerConnectionType = 'usb'|'bluetooth';
 interface AppSettings {
   language: string;
   displayDenomination: string;
-  // displayPrefix: string | null;
+  displayPrefix: string | null;
   walletStore: string;
   displayCurrency: string;
   defaultRepresentative: string | null;
