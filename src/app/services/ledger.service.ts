@@ -320,7 +320,7 @@ export class LedgerService {
             this.ledger.status = LedgerStatus.NOT_CONNECTED;
             this.ledgerStatus$.next({ status: this.ledger.status, statusText: `Unable to load Ledger transport: ${err.message || err}` });
             if (!hideNotifications) {
-              this.notifications.sendWarning(`Ledger connection failed. Make sure your Ledger is unlocked.  Restart the nano app on your Ledger if the error persists`);
+              this.notifications.sendWarning(`Ledger connection failed. Make sure your Ledger is unlocked.  Restart the KOTAI app on your Ledger if the error persists`);
             }
           }
           this.resetLedger();
@@ -341,7 +341,7 @@ export class LedgerService {
         this.ledger.status = LedgerStatus.NOT_CONNECTED;
         this.ledgerStatus$.next({ status: this.ledger.status, statusText: `Unable to detect Nano Ledger application (Timeout)` });
         if (!hideNotifications) {
-          this.notifications.sendWarning(`Unable to connect to the Ledger device.  Make sure it is unlocked and the nano application is open`);
+          this.notifications.sendWarning(`Unable to connect to the Ledger device.  Make sure it is unlocked and the KOTAI application is open`);
         }
         resolved = true;
         return resolve(false);
@@ -356,12 +356,12 @@ export class LedgerService {
       } catch (err) {
         console.log(`App config error: `, err);
         this.ledger.status = LedgerStatus.NOT_CONNECTED;
-        this.ledgerStatus$.next({ status: this.ledger.status, statusText: `Unable to load Nano App configuration: ${err.message || err}` });
+        this.ledgerStatus$.next({ status: this.ledger.status, statusText: `Unable to load KOTAI App configuration: ${err.message || err}` });
         if (err.statusText === 'HALTED') {
           this.resetLedger();
         }
         if (!hideNotifications && !resolved) {
-          this.notifications.sendWarning(`Unable to connect to the Ledger device.  Make sure your Ledger is unlocked.  Restart the nano app on your Ledger if the error persists`);
+          this.notifications.sendWarning(`Unable to connect to the Ledger device.  Make sure your Ledger is unlocked.  Restart the KOTAI app on your Ledger if the error persists`);
         }
         resolved = true;
         return resolve(false);
@@ -382,7 +382,7 @@ export class LedgerService {
         if (err.statusCode === STATUS_CODES.SECURITY_STATUS_NOT_SATISFIED) {
           this.ledger.status = LedgerStatus.LOCKED;
           if (!hideNotifications) {
-            this.notifications.sendWarning(`Ledger device locked.  Unlock and open the nano application`);
+            this.notifications.sendWarning(`Ledger device locked.  Unlock and open the KOTAI application`);
           }
         }
       }

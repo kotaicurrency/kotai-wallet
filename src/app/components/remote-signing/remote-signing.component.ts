@@ -108,7 +108,7 @@ export class RemoteSigningComponent implements OnInit {
     if (this.validateDestination()) {
       this.router.navigate(['account', this.toAccountID], { queryParams: {sign: 1}});
     } else {
-      this.notificationService.sendWarning('Invalid nano account!');
+      this.notificationService.sendWarning('Invalid KOTAI account!');
     }
   }
 

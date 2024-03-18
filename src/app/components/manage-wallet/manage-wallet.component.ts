@@ -187,7 +187,7 @@ export class ManageWalletComponent implements OnInit {
       }
     }
 
-    const fileName = `Nault-Wallet.json`;
+    const fileName = `KOTAI-Wallet-Wallet.json`;
     const exportData = this.walletService.generateExportData();
     this.triggerFileDownload(fileName, exportData, 'json');
 
@@ -239,7 +239,7 @@ export class ManageWalletComponent implements OnInit {
 
     if (this.invalidCsvCount) {
       if (this.beyondCsvLimit) {
-        return this.notifications.sendWarning(`To export transactions above the limit, please use a custom Nault server`);
+        return this.notifications.sendWarning(`To export transactions above the limit, please use a custom KOTAI-Wallet server`);
       } else {
         return this.notifications.sendWarning(`Invalid limit`);
       }

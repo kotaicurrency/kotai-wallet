@@ -2,7 +2,7 @@
   "name": "nault",
   "version": "1.18.3",
   "license": "MIT",
-  "description": "Wallet for interacting with nano",
+  "description": "Wallet for interacting with KOTAI",
   "author": "The Nano Community / Andrew Steele",
   "main": "desktop-app/dist/desktop-app.js",
   "scripts": {

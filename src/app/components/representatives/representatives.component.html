@@ -14,20 +14,24 @@
       <div class="uk-width-1-1">
 
         <div class="uk-card uk-overflow-auto" *ngIf="!hideOverview">
-          <p>Representatives participate in the <a href="https://docs.nano.org/protocol-design/orv-consensus/" target="_blank" rel="noopener noreferrer">nano consensus protocol</a> on your behalf. You can change them at any time.</p>
+          <p>Representatives participate in the <a href="https://docs.nano.org/protocol-design/orv-consensus/" target="_blank" rel="noopener noreferrer">KOTAI consensus protocol</a> on your behalf. You can change them at any time.</p>
 
           <table class="uk-table uk-table-striped uk-table-small">
             <thead>
               <tr>
+                <!--
                 <th scope="col" class="representative-health-column-header hide-on-small-viewports">Status</th>
+                -->
                 <th scope="col" class="uk-width-expand">Representative</th>
                 <th scope="col" class="voting-weight-column-header uk-width-1-4 uk-text-right">Voting Weight</th>
               </tr>
             </thead>
             <tbody>
               <ng-container *ngIf="!loadingRepresentatives">
-              <ng-container *ngFor="let rep of representativeOverview">
-                <ng-template #representativeHealth>
+              
+                <ng-container *ngFor="let rep of representativeOverview">
+<!--
+                  <ng-template #representativeHealth>
                   <ng-container [ngSwitch]="true">
                     <div class="representative-health-status health-green" *ngSwitchCase="(rep.statusText == 'trusted')">
                       <div class="health-icon"></div>
@@ -51,16 +55,21 @@
                     </div>
                   </ng-container>
                 </ng-template>
+                -->
                 <tr class="representative-row">
+                  <!--
                   <td class="representative-health-column uk-visible-toggle uk-text-truncate hide-on-small-viewports">
                     <ng-template [ngTemplateOutlet]="representativeHealth"></ng-template>
                   </td>
+                  -->
                   <td class="representative-name-column uk-text-truncate rep-container" (click)="addSelectedAccounts(rep.accounts)">
                     <div class="representative-label-container">
                       <div class="account-label rep">{{ rep.label ? rep.label : 'Unknown Rep' }}</div>
+                      <!--
                       <div class="representative-weight-percentage uk-width-auto uk-flex-inline uk-flex-middle">
                         <div class="value uk-text-small text-half-muted" *ngIf="!rep.percent.isZero()">{{ rep.percent.toFixed(2) }}%</div>
                       </div>
+                    -->
                     </div>
                     <div class="representative-address uk-text-small uk-text-truncate">
                       <app-nano-account-id [accountID]="rep.id" middle="auto" class="nano-address-monospace"></app-nano-account-id>
@@ -74,7 +83,7 @@
                     <div class="amounts">
                       <span class="amount-integer">{{ rep.delegatedWeight | rai: 'mnano,true' | amountsplit: 0 }}</span>
                       <span class="amount-fractional">{{ rep.delegatedWeight | rai: 'mnano,true' | amountsplit: 1 }}</span>
-                      <span class="currency-name">XNO</span>
+                      <span class="currency-name">KTI</span>
                     </div>
                   </td>
                 </tr>
@@ -97,7 +106,7 @@
                     <div class="amounts">
                       <span class="amount-integer">{{ delegatingAccount.balance | rai: 'mnano,true' | amountsplit: 0 }}</span>
                       <span class="amount-fractional">{{ delegatingAccount.balance | rai: 'mnano,true' | amountsplit: 1 }}</span>
-                      <span class="currency-name">XNO</span>
+                      <span class="currency-name">KTI</span>
                     </div>
                   </td>
                 </tr>
@@ -136,7 +145,7 @@
                   <select class="uk-select" [(ngModel)]="changeAccountID" (change)="newAccountID()" id="form-horizontal-select">
                     <option [value]="null">Select Accounts to Change</option>
                     <option [value]="'all'">All Current Accounts</option>
-                    <option *ngFor="let account of walletService.wallet.accounts" [value]="account.id">{{account.addressBookName ? account.addressBookName + ' - ' : '#' + account.index + ' - ' }} {{ account.id | squeeze }} ({{ account.balance | rai: 'mnano,true' | amountsplit: 0 }}{{ account.balance | rai: 'mnano,true' | amountsplit: 1 }} XNO)</option>
+                    <option *ngFor="let account of walletService.wallet.accounts" [value]="account.id">{{account.addressBookName ? account.addressBookName + ' - ' : '#' + account.index + ' - ' }} {{ account.id | squeeze }} ({{ account.balance | rai: 'mnano,true' | amountsplit: 0 }}{{ account.balance | rai: 'mnano,true' | amountsplit: 1 }} KTI)</option>
                   </select>
                   <ul class="uk-list uk-list-striped">
                     <li *ngFor="let account of selectedAccounts">

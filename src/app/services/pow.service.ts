@@ -8,7 +8,7 @@ import {UtilService} from './util.service';
 import {BehaviorSubject} from 'rxjs';
 
 const mod = window['Module'];
-export const baseThreshold = 'fffffff800000000'; // threshold since v21 epoch update
+export const baseThreshold = 'fe00000000000000'; // PoW
 const hardwareConcurrency = window.navigator.hardwareConcurrency || 2;
 const workerCount = Math.max(hardwareConcurrency - 1, 1);
 let workerList = [];
@@ -224,9 +224,9 @@ export class PowService {
       newThreshold + ' using ' + serverString + ' server for hash: ', hash);
     return await this.api.workGenerate(hash, newThreshold, workServer)
     .then(work => work.work)
-    // Do not fallback to CPU pow. Let the user decide
-    // .catch(async err => await this.getHashCPUWorker(hash, multiplier))
-    .catch(err => null);
+    // fallback to CPU pow
+    .catch(async err => await this.getHashCPUWorker(hash, multiplier))
+    //.catch(err => null);
   }
 
   /**

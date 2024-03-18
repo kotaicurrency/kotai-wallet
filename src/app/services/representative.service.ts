@@ -113,7 +113,7 @@ export class RepresentativeService {
   }
 
   /**
-   * Get a detailed overview of representatives for all acounts in the wallet
+   * Get a detailed overview of representatives for all accounts in the wallet
    * @returns {Promise<FullRepresentativeOverview[]>}
    */
   async getRepresentativesOverview(): Promise<FullRepresentativeOverview[]> {
@@ -375,8 +375,8 @@ export class RepresentativeService {
     const list = JSON.parse(representativeStore);
 
     const newRepList = list.map(entry => {
-      if (entry.id.indexOf('xrb_') !== -1) {
-        entry.id = entry.id.replace('xrb_', 'nano_');
+      if (entry.id.indexOf('nano_') !== -1) {
+        entry.id = entry.id.replace('nano_', 'kti_');
       }
       return entry;
     });
@@ -454,11 +454,18 @@ export class RepresentativeService {
 
   // Default representatives list
   // eslint-disable-next-line @typescript-eslint/member-ordering
-  defaultRepresentatives = [];
+  defaultRepresentatives = [
+    {
+      id: 'kti_11tuuo37eucdkwsgn4gngd88j7o3c36sme7fbby9q5uwxdswq919xy8uwgku',
+      name: 'KOTAI',
+    },
+
+  ];
 
   // Bad representatives hardcoded to be avoided. Not visible in the user rep list
   // eslint-disable-next-line @typescript-eslint/member-ordering
   nfReps = [
+    /*
     {
       id: 'nano_3arg3asgtigae3xckabaaewkx3bzsh7nwz7jkmjos79ihyaxwphhm6qgjps4',
       name: 'Nano Foundation #1',
@@ -491,6 +498,7 @@ export class RepresentativeService {
       id: 'nano_1hza3f7wiiqa7ig3jczyxj5yo86yegcmqk3criaz838j91sxcckpfhbhhra1',
       name: 'Nano Foundation #8',
     },
+    */
   ];
 
 }

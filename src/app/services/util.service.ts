@@ -293,7 +293,7 @@ function generateAccountKeyPair(accountSecretKeyBytes, expanded = false) {
   return nacl.sign.keyPair.fromSecretKey(accountSecretKeyBytes, expanded);
 }
 
-function getPublicAccountID(accountPublicKeyBytes, prefix = 'nano') {
+function getPublicAccountID(accountPublicKeyBytes, prefix = 'kti') {
   const accountHex = util.uint8.toHex(accountPublicKeyBytes);
   const keyBytes = util.uint4.toUint8(util.hex.toUint4(accountHex)); // For some reason here we go from u, to hex, to 4, to 8??
   const checksum = util.uint5.toString(util.uint4.toUint5(util.uint8.toUint4(blake.blake2b(keyBytes, null, 5).reverse())));
@@ -303,7 +303,8 @@ function getPublicAccountID(accountPublicKeyBytes, prefix = 'nano') {
 }
 
 function isValidAccount(account: string): boolean {
-  return nanocurrency.checkAddress(account);
+  return true;
+  //return nanocurrency.checkAddress(account);
 }
 
 // Check if a string is a numeric and larger than 0 but less than nano supply
@@ -328,11 +329,11 @@ function isValidAmount(val: string) {
 
 function getAccountPublicKey(account) {
   if (!isValidAccount(account)) {
-    throw new Error(`Invalid nano account`);
+    throw new Error(`Invalid KOTAI account`);
   }
   const account_crop = account.length === 64 ? account.substring(4, 64) : account.substring(5, 65);
   const isValid = /^[13456789abcdefghijkmnopqrstuwxyz]+$/.test(account_crop);
-  if (!isValid) throw new Error(`Invalid nano account`);
+  if (!isValid) throw new Error(`Invalid KOTAI account`);
 
   const key_uint4 = array_crop(uint5ToUint4(stringToUint5(account_crop.substring(0, 52))));
   const hash_uint4 = uint5ToUint4(stringToUint5(account_crop.substring(52, 60)));
@@ -344,11 +345,13 @@ function getAccountPublicKey(account) {
   return uint4ToHex(key_uint4);
 }
 
-function setPrefix(account, prefix = 'xrb') {
+function setPrefix(account, prefix = 'kti') {
   if (prefix === 'nano') {
-    return account.replace('xrb_', 'nano_');
-  } else {
-    return account.replace('nano_', 'xrb_');
+    return account.replace('nano_', 'kti_');
+  }  else if (prefix === 'xrb') {
+    return account.replace('xrb_', 'kti_');
+  }  else {
+    return account.replace('nano_', 'kti_');
   }
 }
 

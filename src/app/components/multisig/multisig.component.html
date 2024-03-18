@@ -12,7 +12,7 @@
             </p>
 
             <h4>1 - Create a Multisig Address</h4>
-            <p>Add 2 or more nano addresses to form a new multisig address.<br>
+            <p>Add 2 or more KOTAI addresses to form a new multisig address.<br>
             If you (or the participants) don't have any, they can be generated with the <a routerLink="/keygenerator" class="name">Keypair Generator</a> and stored safely.
             </p>
             <div>
@@ -122,7 +122,7 @@
                   <div class="uk-inline uk-width-1-1">
                     <a class="uk-form-icon uk-form-icon-flip" uk-icon="icon: camera" (click)="openQR('multisig','account')" uk-tooltip title="Scan from QR code"></a>
                     <a *ngIf="multisigAccount !== ''" class="uk-form-icon uk-form-icon-flip second-icon" ngxClipboard [cbContent]="multisigAccount" (cbOnSuccess)="copied()" uk-icon="icon: copy" title="Copy Account" uk-tooltip></a>
-                    <input (input)="validateMultisig()" (keyup.enter)="navigateAccount()" [(ngModel)]="multisigAccount" class="uk-input" [ngClass]="{ 'uk-form-success': multisigAccountStatus === 1, 'uk-form-danger': multisigAccountStatus === 0 }" type="text" placeholder="nano_1abc..." autocomplete="off">
+                    <input (input)="validateMultisig()" (keyup.enter)="navigateAccount()" [(ngModel)]="multisigAccount" class="uk-input" [ngClass]="{ 'uk-form-success': multisigAccountStatus === 1, 'uk-form-danger': multisigAccountStatus === 0 }" type="text" placeholder="kti_1abc..." autocomplete="off">
                   </div>
                 </div>
               </div>

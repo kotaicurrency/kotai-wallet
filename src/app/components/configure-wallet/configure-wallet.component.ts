@@ -159,11 +159,11 @@ export class ConfigureWalletComponent implements OnInit {
 
     if (this.ledger.status === LedgerStatus.NOT_CONNECTED) {
       this.ledgerService.resetLedger();
-      return this.notifications.sendWarning(`Failed to connect the Ledger device. Make sure the nano app is running on the Ledger. If the error persists: Check the <a href="https://docs.nault.cc/2020/08/04/ledger-guide.html#troubleshooting" target="_blank" rel="noopener noreferrer">troubleshooting guide</a>`, { identifier: 'ledger-error', length: 0 });
+      return this.notifications.sendWarning(`Failed to connect the Ledger device. Make sure the KOTAI app is running on the Ledger. If the error persists: Check the <a href="https://docs.nault.cc/2020/08/04/ledger-guide.html#troubleshooting" target="_blank" rel="noopener noreferrer">troubleshooting guide</a>`, { identifier: 'ledger-error', length: 0 });
     }
 
     if (this.ledger.status === LedgerStatus.LOCKED) {
-      return this.notifications.sendWarning(`Unlock your Ledger device and open the nano app to continue`);
+      return this.notifications.sendWarning(`Unlock your Ledger device and open the KOTAI app to continue`);
     }
 
     if (this.ledger.status === LedgerStatus.READY) {
@@ -191,7 +191,7 @@ export class ConfigureWalletComponent implements OnInit {
     const UIkit = window['UIkit'];
     try {
       const msg = this.walletService.isLedgerWallet()
-        ? '<p class="uk-alert uk-alert-info"><br><span class="uk-flex"><span uk-icon="icon: info; ratio: 3;" class="uk-align-center"></span></span><span style="font-size: 18px;">You are about to configure a new wallet, which will <b>disconnect your Ledger device from Nault</b>.</span><br><br>If you need to use the Ledger wallet, simply import your device again.</p><br>'
+        ? '<p class="uk-alert uk-alert-info"><br><span class="uk-flex"><span uk-icon="icon: info; ratio: 3;" class="uk-align-center"></span></span><span style="font-size: 18px;">You are about to configure a new wallet, which will <b>disconnect your Ledger device from KOTAI-Wallet</b>.</span><br><br>If you need to use the Ledger wallet, simply import your device again.</p><br>'
         : '<p class="uk-alert uk-alert-danger"><br><span class="uk-flex"><span uk-icon="icon: warning; ratio: 3;" class="uk-align-center"></span></span><span style="font-size: 18px;">You are about to configure a new wallet, which will <b>replace your currently configured wallet</b>.</span><br><br><b style="font-size: 18px;">' + this.translocoService.translate('reset-wallet.before-continuing-make-sure-you-have-saved-the-nano-seed') + '</b><br><br><b style="font-size: 18px;">' + this.translocoService.translate('reset-wallet.you-will-not-be-able-to-recover-the-funds-without-a-backup') + '</b></p><br>';
       await UIkit.modal.confirm(msg);
       return true;
