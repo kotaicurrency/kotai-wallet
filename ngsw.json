@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1710793571206,
+  "timestamp": 1710796018005,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -265,7 +265,7 @@
     "/assets/logo_source/nault-logo.eps": "a2147e36015ef5497c846a0b74dfb2a4828fd2cd",
     "/assets/logo_source/nault-logo.svg": "d9682092a80a1e825c646a1e7cebd8e4e9aead49",
     "/cpupow.1b0c7179f5d0d4bc.worker.js": "2d8ac5de31b8bbdad4a3118f49e1b4397a559f44",
-    "/index.html": "7e9546e85764a1f65f465496482f1f32cc7056a7",
+    "/index.html": "211fedd3a53037d8204ee8567271cc4c336594c6",
     "/main.259d6c869b97092a.js": "9d0f335e9408deaa495795ab886ffc9edfdbd6fb",
     "/manifest.webmanifest": "fb9ce0116a92808e43c4203fa61fdcb255708437",
     "/montserrat-v15-latin-300.169464b41fd5a6ed.woff2": "cf6855b4b8fd9b7fc4d7adecd97080a70ad75c23",
