@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1710796018005,
+  "timestamp": 1711051532040,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -13,11 +13,11 @@
       "urls": [
         "/cpupow.1b0c7179f5d0d4bc.worker.js",
         "/index.html",
-        "/main.259d6c869b97092a.js",
+        "/main.ec7b58604ee63800.js",
         "/manifest.webmanifest",
         "/polyfills.6ff8b11604869675.js",
         "/runtime.7033464e22e3fa49.js",
-        "/styles.4a21958ab3d4dd96.css",
+        "/styles.630f3103acd889d6.css",
         "/translation0.560177baba07ff80.js",
         "/translation1.115b2f8157080003.js"
       ],
@@ -131,7 +131,6 @@
         "/montserrat-v15-latin-regular.2a176a1c6698749e.eot",
         "/montserrat-v15-latin-regular.8e4e187154ffbec3.svg",
         "/montserrat-v15-latin-regular.b9de6aa2f4bccfc5.woff",
-        "/nano-mark.0a59c18980925e9b.svg",
         "/nault-logo-night-mode.a6938bc63af08845.svg",
         "/nault-logo.4b7399c0b84d744e.svg",
         "/open-sans-v20-latin-300.5c61db84a38fcda7.woff",
@@ -265,8 +264,8 @@
     "/assets/logo_source/nault-logo.eps": "a2147e36015ef5497c846a0b74dfb2a4828fd2cd",
     "/assets/logo_source/nault-logo.svg": "d9682092a80a1e825c646a1e7cebd8e4e9aead49",
     "/cpupow.1b0c7179f5d0d4bc.worker.js": "2d8ac5de31b8bbdad4a3118f49e1b4397a559f44",
-    "/index.html": "211fedd3a53037d8204ee8567271cc4c336594c6",
-    "/main.259d6c869b97092a.js": "9d0f335e9408deaa495795ab886ffc9edfdbd6fb",
+    "/index.html": "c51cbd719c37bc5d598b94a9ed32550059e0661f",
+    "/main.ec7b58604ee63800.js": "04aa6fde10fe583ae804db58b30708177042ea4e",
     "/manifest.webmanifest": "fb9ce0116a92808e43c4203fa61fdcb255708437",
     "/montserrat-v15-latin-300.169464b41fd5a6ed.woff2": "cf6855b4b8fd9b7fc4d7adecd97080a70ad75c23",
     "/montserrat-v15-latin-300.1fb23400394501d6.eot": "79ffc50c09de54d30478eb89c6984bbcb41ba5f9",
@@ -288,7 +287,6 @@
     "/montserrat-v15-latin-regular.2a176a1c6698749e.eot": "2a47f07ae10a8febb09428908b0a1e576e20f281",
     "/montserrat-v15-latin-regular.8e4e187154ffbec3.svg": "0c3903258fd9750d143ccdb3ec0885ab46bce1dd",
     "/montserrat-v15-latin-regular.b9de6aa2f4bccfc5.woff": "5af1938d1327395f47c84e57b6ba7756234d2262",
-    "/nano-mark.0a59c18980925e9b.svg": "5ce08e275ade0207373866d3c28896b8495e5562",
     "/nault-logo-night-mode.a6938bc63af08845.svg": "03d4186b744e568a1638297e532c4fded7e358ee",
     "/nault-logo.4b7399c0b84d744e.svg": "d9682092a80a1e825c646a1e7cebd8e4e9aead49",
     "/open-sans-v20-latin-300.5c61db84a38fcda7.woff": "1da733c279aa12c3d8857aed80cd910c2b209eae",
@@ -309,7 +307,7 @@
     "/roboto-mono-v13-latin-regular.898c8f1605bccd5e.ttf": "78b1b85542fec9c2239186aa495e2aa944456577",
     "/roboto-mono-v13-latin-regular.cecd954c0606bb3f.svg": "23049436a09c54fd366e30d8da2d14ecdc561afe",
     "/runtime.7033464e22e3fa49.js": "529868c67bf7c5e9e1bb69cc823dc08161d2803b",
-    "/styles.4a21958ab3d4dd96.css": "14a9b76e54cd89bb9e0e67702e42a3617b80dc6f",
+    "/styles.630f3103acd889d6.css": "f62198f896d2cf54a312f1a0ac71f6d2355d3b77",
     "/translation0.560177baba07ff80.js": "4255f98b8300f023ff5026b3a4bcaeff2af8f810",
     "/translation1.115b2f8157080003.js": "de8915bcedc37e93727b4592c95cb24c3cc22f5b",
     "/xno-symbol.3cb95f098aabf0a4.svg": "4f9266fc765ef47c314f159b02f74304445b9f7c"
