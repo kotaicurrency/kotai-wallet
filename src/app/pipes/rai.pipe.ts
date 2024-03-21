@@ -25,7 +25,7 @@ export class RaiPipe implements PipeTransform {
           const newVal = value / this.mrai < 0.000001 ? 0 : value / this.mrai;
           return `${this.toFixed(newVal, this.precision)}${!hideText ? ' KTI' : ''}`;
         } else {
-          return `${(value / this.mrai).toFixed(6)}${!hideText ? ' KTI' : ''}`;
+          return `${(value / this.mrai).toFixed(2)}${!hideText ? ' KTI' : ''}`;
         }
       case 'knano': return `${(value / this.krai).toFixed(3)}${!hideText ? ' knano' : ''}`;
       case 'nano': return `${(value / this.rai).toFixed(0)}${!hideText ? ' nano' : ''}`;
