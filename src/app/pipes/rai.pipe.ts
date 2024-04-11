@@ -53,8 +53,9 @@ export class RaiPipe implements PipeTransform {
     if (isNaN(num)) {
       return 0;
     }
-    const re = new RegExp('^-?\\d+(?:\.\\d{0,' + (fixed || -1) + '})?');
-    return num.toString().match(re)[0];
+    return num.toFixed(2); // Round the number to two decimal places
+    //const re = new RegExp('^-?\\d+(?:\.\\d{0,' + (fixed || -1) + '})?');
+    //return num.toString().match(re)[0];
   }
 
 }
