@@ -18,7 +18,7 @@ export class AmountSplitPipe implements PipeTransform {
       return '';
     }
 
-    const fractionalAmount = splitAmount.replace(/0+$/g, '');
+    const fractionalAmount = splitAmount.replace(/0+$/g, '').slice(0, 2);
 
     if (fractionalAmount === '') {
       return '';
