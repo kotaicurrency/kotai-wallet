@@ -29,7 +29,7 @@ export interface BalanceAccount {
 export class AddressBookComponent implements OnInit, AfterViewInit, OnDestroy {
 
   //nano = 1000000000000000000000000;
-  nano = 1000000000000000000000;
+  nano = 1000000000000000000;
   activePanel = 0;
   creatingNewEntry = false;
 

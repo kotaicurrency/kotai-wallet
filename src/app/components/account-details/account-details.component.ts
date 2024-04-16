@@ -25,7 +25,7 @@ import { TranslocoService } from '@ngneat/transloco';
 })
 export class AccountDetailsComponent implements OnInit, OnDestroy {
   //nano = 1000000000000000000000000;
-  nano = 1000000000000000000000;
+  nano = 1000000000000000000;
   zeroHash = '0000000000000000000000000000000000000000000000000000000000000000';
 
   accountHistory: any[] = [];
